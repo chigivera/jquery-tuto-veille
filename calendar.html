@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALENDAR</title>
+    <!-- Include animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Include jQuery UI CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <!-- Include jQuery UI JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include Mobiscroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mobiscroll/react@4.8.3/dist/css/mobiscroll.min.css">
+    <!-- Include Mobiscroll JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@mobiscroll/react@4.8.3/dist/js/mobiscroll.min.js"></script>
+    <!-- Include FullCalendar CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.css">
+    <!-- Include FullCalendar JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.js"></script>
+    <script src="basics.js" defer></script>
+</head>
+<body>
+    <input id="button-picker" />
+    <button id="show-picker">Show picker</button>
+
+    <script>
+        $(document).ready(function(){
+            var picker = $('#button-picker').mobiscroll().datepicker({
+                controls: ['calendar'],
+                touchUi: true,
+                showOnClick: false,
+                showOnFocus: false
+            }).mobiscroll('getInst');
+
+            $('#show-picker').click(function () {
+                picker.open();
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

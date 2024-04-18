@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOCOMPLETE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Include jQuery UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
+    <script src="basics.js" defer></script>
+</head>
+<body>
+    <input data="" type="text" id="autocompleteInput">
+
+<script>
+    $(document).ready(function(){
+        var availableTags = ["Apple", "Banana", "Orange", "Mango"];
+        // Initialize Autocomplete with source option
+        $('#autocompleteInput').autocomplete({
+            source: availableTags
+        });
+    });
+</script>
+
+</body>
+</html>
